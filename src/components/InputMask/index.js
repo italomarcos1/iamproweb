@@ -9,7 +9,7 @@ export default function CustomInput({ title, full, style, name, ...rest }) {
     <Container full={full} style={style}>
       <Title>{title}</Title>
       <div>
-        <input class="areaCode" placeholder="34" disabled />
+        <input class="areaCode" placeholder="35" disabled />
         <InputMask name={name} {...rest} />
       </div>
     </Container>
