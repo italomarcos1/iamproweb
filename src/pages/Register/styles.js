@@ -17,6 +17,7 @@ export const Container = styled.div`
       letter-spacing: 0px;
       color: #fff;
     }
+
     #phone {
       display: none;
       margin-top: 40px;
@@ -219,11 +220,9 @@ export const InputContainer = styled.div`
     grid-column: 2/8;
     flex-direction: column;
     width: 100%;
+    margin-top: 40px;
 
     input {
-      width: 100%;
-    }
-    select {
       width: 100%;
     }
   }

@@ -18,6 +18,7 @@ import logo from '../../assets/logo.png';
 import smartphone from '../../assets/app-1.png';
 import Input from '../../components/Input';
 import SmallSelect from '../../components/SmallSelect';
+import Select from '../../components/Select';
 import TextArea from '../../components/TextArea';
 import InputMask from '../../components/InputMask';
 
@@ -57,7 +58,22 @@ export default function Register() {
           <InputContainer id="inputcontainer">
             <Input title="Nome Completo" placeholder="Informe seu nome" />
 
-            <SmallSelect title="Gênero" placeholder="Selecione..." style={{}} />
+            <SmallSelect
+              title="Gênero"
+              placeholder="Selecione..."
+              style={
+                isDesktop === true ? { display: 'block' } : { display: 'none' }
+              }
+            />
+            <Select
+              title="Gênero"
+              placeholder="Selecione..."
+              style={
+                isDesktop === true
+                  ? { display: 'none' }
+                  : { display: 'block', marginTop: 20 }
+              }
+            />
             <Input
               title="Data de Nascimento"
               placeholder="DD/MM/AAAA"
