@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import {
   Container,
   Header,
-  Title,
   Logo,
+  BannerContainer,
   Content,
   Info,
   Services,
@@ -27,16 +27,18 @@ export default function Main() {
   return (
     <Container>
       <Header>
-        <Title />
-
-        <Logo>
+        <Link>
           <img src={logo} alt="Logo" srcSet={`${logo} 1x, ${logo2} 2x`} />
-        </Logo>
-        <Content id="content">
+        </Link>
+      </Header>
+
+      <BannerContainer>
+        <Content>
           <strong>Você é um profissional?</strong>
           <Link to="/register">Cadastre-se Gratuitamente</Link>
         </Content>
-      </Header>
+      </BannerContainer>
+
       <RegisterButton to="/register" id="participe">
         Cadastre-se Gratuitamente
       </RegisterButton>

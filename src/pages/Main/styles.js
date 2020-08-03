@@ -6,6 +6,7 @@ import bannermobile from '../../assets/headerbg.png';
 export const Container = styled.div`
   width: 100%;
   height: 100%;
+  padding-top: 60px;
 
   @media screen and (min-width: 100px) {
     #phone {
@@ -23,7 +24,21 @@ export const Container = styled.div`
   }
 `;
 
-export const Header = styled.section`
+export const Header = styled.header`
+  background: rgba(255, 255, 255, 0.9);
+  /* box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1); */
+  padding: 10px 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+`;
+
+export const BannerContainer = styled.section`
   /** Grid Default Properties */
 
   display: grid;
@@ -38,41 +53,69 @@ export const Header = styled.section`
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
-  padding-top: 10px;
-  height: 187px;
   transition: 0.2s;
 
   @media screen and (min-width: 900px) {
     height: 607px;
     background-image: url(${banner});
-    background-position: bottom;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
-    padding-top: 10px;
     transition: 0.2s;
   }
 `;
 
+export const Content = styled.div`
+  flex-direction: column;
+  grid-column: 2/6;
+  grid-row: 1;
+  margin: 100px 0 0 170px;
+
+  strong {
+    text-align: left;
+    font: 40px/48px 'SFProHeavy';
+    letter-spacing: 0;
+    width: 100%;
+    color: #141530;
+    text-transform: uppercase;
+  }
+
+  a {
+    text-align: center;
+    margin-top: 30px;
+    align-self: flex-start;
+    border-radius: 35px;
+    background-color: #145ca7;
+    padding: 16px 35px;
+    font: 22px 'SFProSemibold';
+    letter-spacing: 1px;
+    color: #fff;
+    user-select: none;
+
+    &:hover {
+      background: #3a99d7;
+    }
+  }
+
+  @media screen and (min-width: 50px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 900px) {
+    display: flex;
+  }
+`;
+
 export const Title = styled.div`
-  background-color: rgba(255, 255, 255, 0.6);
+  /* background-color: rgba(255, 255, 255, 0.6); */
+  /* background: #ff0;
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
   height: 66px;
   transition: 0.2s;
   grid-column: 1/9;
-  grid-row: 1;
-`;
-
-export const Logo = styled.div`
-  grid-column: 1/9;
-  grid-row: 1;
-  text-align: center;
-
-  img {
-    grid-column: 3/7;
-    text-align: center;
-  }
+  grid-row: 1; */
 `;
 
 export const RegisterButton = styled(Link)`
@@ -93,55 +136,6 @@ export const RegisterButton = styled(Link)`
   &:hover {
     background: #3a99d7;
     border: 2px solid #3a99d7;
-  }
-`;
-
-export const Content = styled.div`
-  flex-direction: column;
-  grid-column: 3/7;
-  grid-row: 1;
-  margin-top: 104px;
-  width: 70%;
-
-  strong {
-    text-align: left;
-    font: 40px/48px 'SFProBold';
-    letter-spacing: 0px;
-    width: 100%;
-    color: #141530;
-    text-transform: uppercase;
-  }
-
-  a {
-    grid-column: 3/5;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-row: 1;
-    margin-top: 30px;
-    align-self: flex-start;
-    width: 65%;
-    border: 2px solid #145ca7;
-    border-radius: 35px;
-    background-color: #145ca7;
-    height: 74px;
-    font: 22px 'SFProBold';
-    letter-spacing: 0px;
-    color: #fff;
-    user-select: none;
-    &:hover {
-      background: #3a99d7;
-      border: 2px solid #3a99d7;
-    }
-  }
-
-  @media screen and (min-width: 50px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 900px) {
-    display: flex;
   }
 `;
 

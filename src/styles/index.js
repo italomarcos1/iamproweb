@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import SFPro from '../assets/fonts/SanFrancisco.otf';
+import SFProSemibold from '../assets/fonts/SanFranciscoSemibold.otf';
 import SFProBold from '../assets/fonts/SanFranciscoBold.otf';
 import SFProHeavy from '../assets/fonts/SanFraciscoHeavy.otf';
 
@@ -28,6 +29,10 @@ export default createGlobalStyle`
     user-select:none;
   }
 
+  a, a:hover, a:focus {
+    transition: all .3s;
+  }
+
   li {
     list-style-type: none;
   }
@@ -35,6 +40,11 @@ export default createGlobalStyle`
   @font-face {
     font-family: "SFPro";
     src: local('SFPro'), url(${SFPro}) format('opentype');
+  }
+
+  @font-face {
+    font-family: "SFProSemibold";
+    src: local('SFProSemibold'), url(${SFProSemibold}) format('opentype');
   }
 
   @font-face {
@@ -51,5 +61,4 @@ export default createGlobalStyle`
     overflow-x: hidden;
     font-family: "SFPro";
   }
-
 `;
