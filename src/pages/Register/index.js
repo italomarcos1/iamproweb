@@ -67,7 +67,11 @@ export default function Register() {
             </InputContainer>
           ) : (
             <>
-              <InputContainer>
+              <InputContainer
+                style={{
+                  backgroundColor: '#f80',
+                }}
+              >
                 <Input title="Nome Completo" placeholder="Informe seu nome" />
               </InputContainer>
 
