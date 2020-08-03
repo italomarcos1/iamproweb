@@ -74,7 +74,11 @@ export default function Register() {
                   : { display: 'block', marginVertical: 20 }
               }
             />
-            <Input title="Data de Nascimento" placeholder="DD/MM/AAAA" />
+            <Input
+              title="Data de Nascimento"
+              placeholder="DD/MM/AAAA"
+              style={isDesktop === true ? { width: 160 } : { width: 340 }}
+            />
           </InputContainer>
           <InputContainer
             style={isDesktop === true ? { display: 'flex' } : { height: 140 }}
