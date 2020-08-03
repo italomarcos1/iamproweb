@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 import {
   Container,
@@ -41,6 +42,19 @@ import medico from '../../assets/medico.png';
 import passeioComCao from '../../assets/passeioComCao.png';
 
 export default function Main() {
+  const isDesktop = useMediaQuery({ query: '(min-device-width: 900px)' });
+  const [infoSubtext, setInfoSubtext] = useState(
+    `Tenha os seus serviços a venda no maior aplicativo de Minas Gerais, selecione a área geográfica que deseja atuar \n e os serviços que oferece. Deixe a divulgação conosco!`
+  );
+
+  useEffect(() => {
+    if (!isDesktop) {
+      setInfoSubtext(
+        `Tenha os seus serviços a venda no maior aplicativo de \n Minas Gerais, selecione a área geográfica que deseja \n atuar e os serviços que oferece.`
+      );
+    }
+  }, []);
+
   return (
     <Container>
       <Header>
@@ -61,11 +75,7 @@ export default function Main() {
       </RegisterButton>
       <Info>
         <h2>Participe do maior aplicativo de MG</h2>
-        <h4>
-          Tenha os seus serviços a venda no maior aplicativo de Minas Gerais,
-          selecione a área geográfica que deseja atuar <br /> e os serviços que
-          oferece. Deixe a divulgação conosco!
-        </h4>
+        <h4>{infoSubtext}</h4>
         <strong>Deixe a divulgação conosco!</strong>
       </Info>
       <div id="phone">

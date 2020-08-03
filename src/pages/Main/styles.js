@@ -8,11 +8,9 @@ export const Container = styled.div`
   height: 100%;
   padding-top: 60px;
 
-  @media screen and (min-width: 100px) {
-    #phone {
-      display: block;
-      margin-top: 40px;
-    }
+  #phone {
+    display: block;
+    margin-top: 40px;
   }
 
   @media screen and (min-width: 900px) {
@@ -49,11 +47,15 @@ export const BannerContainer = styled.section`
 
   /* End - Grid Default Properties */
 
-  background-image: url(${bannermobile});
-  background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  transition: 0.2s;
+  @media screen and (min-width: 100px) {
+    background-image: url(${bannermobile});
+    width: 100%;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+    height: 147px;
+  }
 
   @media screen and (min-width: 900px) {
     height: 607px;
@@ -97,7 +99,7 @@ export const Content = styled.div`
     }
   }
 
-  @media screen and (min-width: 50px) {
+  @media screen and (min-width: 100px) {
     display: none;
   }
 
@@ -152,27 +154,28 @@ export const Info = styled.section`
 
   /* End - Grid Default Properties */
 
-  @media screen and (min-width: 50px) {
+  @media screen and (min-width: 100px) {
     text-align: center;
-    margin-top: 20px;
-    padding: 0 10px;
+    margin-top: 10px;
+    padding: 0 20px;
 
     #phone {
       margin-top: 20px;
     }
 
     h2 {
-      font: 19px 'SFProHeavy';
+      font: 18px 'SFProHeavy';
       color: #141530;
       text-transform: uppercase;
       grid-column: 1/9;
     }
 
     h4 {
-      font: 20px 'SFPro';
-      color: #636363;
-
       grid-column: 1/9;
+      font: 18px 'SFPro';
+      letter-spacing: 0.5px;
+      color: #636363;
+      margin-top: 0px;
     }
 
     strong {
@@ -206,9 +209,6 @@ export const Info = styled.section`
 
     strong {
       display: none;
-      font: 20px 'SFProBold';
-      color: #dd1846;
-      grid-column: 2/8;
     }
   }
 `;
@@ -222,7 +222,7 @@ export const Services = styled.section`
   margin: 0 auto;
   margin-bottom: 44px;
 
-  @media screen and (min-width: 50px) {
+  @media screen and (min-width: 100px) {
     text-align: center;
 
     ul {
@@ -315,7 +315,7 @@ export const Highlights = styled.section`
   text-align: center;
   margin-bottom: 200px;
 
-  @media screen and (min-width: 50px) {
+  @media screen and (min-width: 100px) {
     text-align: center;
     height: 501px;
     background: #f3f6f6;
@@ -452,11 +452,9 @@ export const EasyToHireInfo = styled.div`
 
   /* background-color: #0009f7; */
 
-  @media screen and (min-width: 100px) {
-    grid-column: 1/9;
-    width: 80%;
-    margin: 20px auto;
-  }
+  grid-column: 1/9;
+  width: 80%;
+  margin: 20px auto;
 
   @media screen and (min-width: 900px) {
     grid-column: 5/8;
