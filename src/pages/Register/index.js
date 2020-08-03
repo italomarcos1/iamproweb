@@ -67,11 +67,7 @@ export default function Register() {
             </InputContainer>
           ) : (
             <>
-              <InputContainer
-                style={{
-                  backgroundColor: '#f80',
-                }}
-              >
+              <InputContainer>
                 <Input title="Nome Completo" placeholder="Informe seu nome" />
               </InputContainer>
 
@@ -80,8 +76,7 @@ export default function Register() {
                   flexDirection: 'row',
                   width: '100%',
                   height: 80,
-                  justifyContent: 'center',
-                  backgroundColor: '#f8f',
+                  paddingHorizontal: 10,
                 }}
               >
                 <SmallSelect
@@ -89,13 +84,12 @@ export default function Register() {
                   placeholder="Selecione..."
                   style={{
                     display: 'block',
-                    backgroundColor: '#489',
                   }}
                 />
                 <Input
                   title="Data de Nascimento"
                   placeholder="DD/MM/AAAA"
-                  style={{ width: 160, backgroundColor: '#0f9' }}
+                  style={{ width: 160 }}
                 />
               </InputContainer>
             </>
