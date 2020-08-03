@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 import {
   Container,
@@ -41,6 +42,37 @@ import medico from '../../assets/medico.png';
 import passeioComCao from '../../assets/passeioComCao.png';
 
 export default function Main() {
+  const isDesktop = useMediaQuery({ query: '(min-device-width: 900px)' });
+
+  const [infoSubtext, setInfoSubtext] = useState(
+    `Tenha os seus serviços a venda no maior aplicativo de Minas Gerais, selecione a área geográfica que deseja atuar \n e os serviços que oferece. Deixe a divulgação conosco!`
+  );
+
+  const [likeText, setLikeText] = useState(
+    `Participe do maior aplicativo de \nserviços de MG, cadastre-se em 2 \nminutos.`
+  );
+
+  const [locationText, setLocationText] = useState(
+    `Selecione a área geográfica que \n deseja atuar e os serviços que \n oferece.`
+  );
+
+  const [growthText, setGrowthText] = useState(
+    `Nós divulgamos e vendemos o seu \nserviço em um APP com milhares de \nclientes.`
+  );
+
+  useEffect(() => {
+    if (!isDesktop) {
+      setInfoSubtext(
+        `Tenha os seus serviços a venda no maior aplicativo de \n Minas Gerais, selecione a área geográfica que deseja \n atuar e os serviços que oferece.`
+      );
+      setLikeText(
+        `Participe do maior aplicativo de serviços de \n MG, cadastre-se em 2 minutos.`
+      );
+      setLocationText();
+      setGrowthText();
+    }
+  }, []);
+
   return (
     <Container>
       <Header>
@@ -61,11 +93,7 @@ export default function Main() {
       </RegisterButton>
       <Info>
         <h2>Participe do maior aplicativo de MG</h2>
-        <h4>
-          Tenha os seus serviços a venda no maior aplicativo de Minas Gerais,
-          selecione a área geográfica que deseja atuar <br /> e os serviços que
-          oferece. Deixe a divulgação conosco!
-        </h4>
+        <h4>{infoSubtext}</h4>
         <strong>Deixe a divulgação conosco!</strong>
       </Info>
       <div id="phone">
@@ -100,7 +128,9 @@ export default function Main() {
           </li>
         </ul>
       </Services>
-      {/* <Link to="/register" id="register">Cadastre-se Gratuitamente</Link> */}
+      <RegisterButton to="/register" id="participe">
+        Cadastre-se Gratuitamente
+      </RegisterButton>
       <Highlights>
         <strong>Destaque o seu serviço</strong>
         <h2>
@@ -111,11 +141,10 @@ export default function Main() {
         <div>
           <img src={cards} alt="cards" />
         </div>
-        <Link to="/register">Cadastre-se Gratuitamente</Link>
+        <Link to="/register" id="registerWebHighlight">
+          Cadastre-se Gratuitamente
+        </Link>
       </Highlights>
-      <RegisterButton to="/register" id="participe">
-        Cadastre-se Gratuitamente
-      </RegisterButton>
       <EasyToHire>
         <div id="phonebottom">
           <img src={smartphone2} alt="phone" />
@@ -163,16 +192,46 @@ export default function Main() {
         </EasyToHireInfo>
       </EasyToHire>
       <Bubbles>
-        <img src={cabeleireiros} alt="" style={{ width: 192, height: 192 }} />
-        <img src={encanador} alt="" style={{ width: 313, height: 313 }} />
-        <img src={babysitters} alt="" style={{ width: 192, height: 192 }} />
-        <img src={cleaner} alt="" style={{ width: 295, height: 295 }} />
-        <img src={eletricista} alt="" style={{ width: 180, height: 180 }} />
-        <img src={fotografos} alt="" style={{ width: 133, height: 133 }} />
-        <img src={barber} alt="" style={{ width: 229, height: 229 }} />
-        <img src={dj} alt="" style={{ width: 168, height: 168 }} />
-        <img src={passeioComCao} alt="" style={{ width: 195, height: 195 }} />
-        <img src={medico} alt="" style={{ width: 169, height: 169 }} />
+        {isDesktop === true ? (
+          <>
+            <img
+              src={cabeleireiros}
+              alt=""
+              style={{ width: 192, height: 192 }}
+            />
+            <img src={encanador} alt="" style={{ width: 313, height: 313 }} />
+            <img src={babysitters} alt="" style={{ width: 192, height: 192 }} />
+            <img src={cleaner} alt="" style={{ width: 295, height: 295 }} />
+            <img src={eletricista} alt="" style={{ width: 180, height: 180 }} />
+            <img src={fotografos} alt="" style={{ width: 133, height: 133 }} />
+            <img src={barber} alt="" style={{ width: 229, height: 229 }} />
+            <img src={dj} alt="" style={{ width: 168, height: 168 }} />
+            <img
+              src={passeioComCao}
+              alt=""
+              style={{ width: 195, height: 195 }}
+            />
+            <img src={medico} alt="" style={{ width: 169, height: 169 }} />
+          </>
+        ) : (
+          <>
+            <img
+              src={passeioComCao}
+              alt=""
+              style={{ width: 135, height: 135 }}
+            />
+            <img src={barber} alt="" style={{ width: 121, height: 121 }} />
+            <img src={cleaner} alt="" style={{ width: 185, height: 185 }} />
+            <img src={fotografos} alt="" style={{ width: 133, height: 133 }} />
+            <img src={dj} alt="" style={{ width: 133, height: 133 }} />
+            <img
+              src={cabeleireiros}
+              alt=""
+              style={{ width: 108, height: 108 }}
+            />
+            <img src={babysitters} alt="" style={{ width: 115, height: 115 }} />
+          </>
+        )}
       </Bubbles>
     </Container>
   );
