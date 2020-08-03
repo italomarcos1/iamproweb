@@ -94,7 +94,7 @@ export default function Register() {
                 <Input
                   title="Data de Nascimento"
                   placeholder="DD/MM/AAAA"
-                  style={{ width: 160 }}
+                  style={{ width: 160, backgroundColor: '#0f9' }}
                 />
               </InputContainer>
             </>
