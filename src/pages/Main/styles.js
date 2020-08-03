@@ -172,10 +172,11 @@ export const Info = styled.section`
 
     h4 {
       grid-column: 1/9;
-      font: 18px 'SFPro';
+      font: 18px 'SFProLight';
       letter-spacing: 0.5px;
       color: #636363;
-      margin-top: 0px;
+      margin-top: 10px;
+      line-height: 28px;
     }
 
     strong {
@@ -240,7 +241,7 @@ export const Services = styled.section`
     }
 
     strong {
-      font: 22px 'SFProBold';
+      font: 18px 'SFProBold';
       letter-spacing: 0px;
       color: #1e1e1e;
       text-transform: uppercase;
@@ -248,8 +249,9 @@ export const Services = styled.section`
     }
 
     h2 {
-      font: 20px 'SFPro';
+      font: 16px 'SFPro';
       letter-spacing: 0.5px;
+      line-height: 24px;
       color: #535353;
       margin-top: 10px;
     }
@@ -298,6 +300,7 @@ export const Services = styled.section`
       font: 18px 'SFPro';
       letter-spacing: 0.5px;
       color: #636363;
+      line-height: 26px;
       margin-top: 0px;
     }
   }
@@ -310,16 +313,20 @@ export const Highlights = styled.section`
   text-align: center;
   width: 100%;
   margin: 0 auto;
-  margin-top: 40px;
 
   text-align: center;
   margin-bottom: 200px;
 
   @media screen and (min-width: 100px) {
+    #registerWebHighlight {
+      display: none;
+    }
+
     text-align: center;
     height: 501px;
     background: #f3f6f6;
     margin-bottom: 200px;
+    padding: 0 20px;
 
     strong {
       font: 22px 'SFProBold';
@@ -332,12 +339,11 @@ export const Highlights = styled.section`
     }
 
     h2 {
-      font: 20px 'SFPro';
-      letter-spacing: 0px;
-      color: #535353;
-      margin-top: 15px;
       grid-column: 1/9;
-
+      font: 18px 'SFPro';
+      letter-spacing: 0.5px;
+      color: #636363;
+      line-height: 26px;
       grid-row: 2;
       margin-top: 22px;
     }
@@ -347,7 +353,7 @@ export const Highlights = styled.section`
       grid-column: 1/9;
     }
     img {
-      width: 60%;
+      width: 85%;
     }
   }
 
@@ -356,6 +362,11 @@ export const Highlights = styled.section`
     margin-top: 113px;
     background: #f3f6f6;
     text-align: center;
+    margin-top: 40px;
+
+    #registerWebHighlight {
+      display: flex;
+    }
 
     strong {
       grid-row: 1;
@@ -426,6 +437,13 @@ export const EasyToHire = styled.section`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 10px;
+
+  @media screen and (min-width: 100px) {
+    display: none;
+  }
+  @media screen and (min-width: 900px) {
+    display: grid;
+  }
 
   width: 100%;
   margin: 0 auto;
