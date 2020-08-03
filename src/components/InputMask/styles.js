@@ -16,7 +16,7 @@ export const Container = styled.div`
         color: #666;
         font-size: 14px;
         background-color: #fff;
-        border: 1px solid #aaa;
+        border: 1px solid #ccc;
         border-radius: 4px;
         border-bottom-right-radius: 0px;
         border-top-right-radius: 0px;
@@ -27,7 +27,7 @@ export const Container = styled.div`
       height: 50px;
       margin-top: 7px;
       background-color: #fff;
-      border: 1px solid #aaa;
+      border: 1px solid #ccc;
       border-radius: 4px;
       padding: 15px 20px;
       border-bottom-left-radius: 0px;
@@ -36,7 +36,7 @@ export const Container = styled.div`
       color: #666;
 
       &::placeholder {
-        color: #000;
+        color: #111;
       }
     }
   }
@@ -46,5 +46,5 @@ export const Title = styled.small`
   text-align: left;
   font: 14px 'SFPro';
   letter-spacing: 0.28px;
-  color: #aaaaaa;
+  color: #666;
 `;

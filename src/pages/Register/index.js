@@ -55,7 +55,7 @@ export default function Register() {
           <img src={smartphone} alt="phone" />
         </div>
         <Form onSubmit={() => {}}>
-          {isDesktop == true ? (
+          {isDesktop === true ? (
             <InputContainer>
               <Input title="Nome Completo" placeholder="Informe seu nome" />
               <SmallSelect title="Gênero" placeholder="Selecione..." />

@@ -9,21 +9,22 @@ export const Title = styled.small`
   text-align: left;
   font: 14px 'SFPro';
   letter-spacing: 0.28px;
-  color: #aaaaaa;
+  color: #666;
 `;
 
 export const Input = styled.input`
   width: 100%;
   height: 50px;
   margin-top: 7px;
-  background-color: #ffffff;
-  border: 1px solid #aaaaaa;
+  background-color: #fff;
+  border: 1px solid #ccc;
   border-radius: 4px;
   padding: 15px 20px;
+  font: 16px 'SFPro';
 
-  color: #666;
+  color: #222;
 
   &::placeholder {
-    color: #000;
+    color: #111;
   }
 `;

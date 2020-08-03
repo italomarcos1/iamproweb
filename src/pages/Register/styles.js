@@ -198,9 +198,10 @@ export const Form = styled(TForm)`
       background: #0fcc96;
       border: 2px solid #0fcc96;
       border-radius: 35px;
-      font: 26px/31px 'SFProBold';
-      letter-spacing: 0px;
+      font: 22px 'SFProSemibold';
+      letter-spacing: 1px;
       color: #fff;
+      user-select: none;
 
       &:hover {
         background-color: #0cb587;

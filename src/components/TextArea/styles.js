@@ -10,11 +10,7 @@ export const Title = styled.small`
   text-align: left;
   font: 14px 'SFPro';
   letter-spacing: 0.28px;
-  color: #aaaaaa;
-
-  &::placeholder {
-    color: #666;
-  }
+  color: #666;
 `;
 
 export const Input = styled.textarea`
@@ -22,9 +18,10 @@ export const Input = styled.textarea`
   height: 150px;
   resize: none;
   margin-top: 7px;
-  color: #666;
+  color: #222;
+  font: 14px 'SFPro';
   background-color: #ffffff;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #ccc;
   border-radius: 4px;
   padding: 15px 20px;
 `;

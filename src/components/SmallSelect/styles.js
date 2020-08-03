@@ -10,7 +10,7 @@ export const Title = styled.small`
   text-align: left;
   font: 14px 'SFPro';
   letter-spacing: 0.28px;
-  color: #aaaaaa;
+  color: #666;
 `;
 
 export default {

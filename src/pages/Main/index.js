@@ -17,7 +17,7 @@ import {
 
 import logo from '../../assets/logo.png';
 import logo2 from '../../assets/logo@2x.png';
-import cards from '../../assets/cards.png';
+import cards from '../../assets/cards@2x.png';
 import smartphone from '../../assets/smartphone.png';
 import like from '../../assets/like.svg';
 import location from '../../assets/location.svg';

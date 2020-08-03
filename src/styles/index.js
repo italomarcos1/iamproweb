@@ -3,6 +3,7 @@ import SFPro from '../assets/fonts/SanFrancisco.otf';
 import SFProSemibold from '../assets/fonts/SanFranciscoSemibold.otf';
 import SFProBold from '../assets/fonts/SanFranciscoBold.otf';
 import SFProHeavy from '../assets/fonts/SanFraciscoHeavy.otf';
+import SFProLight from '../assets/fonts/SanFranciscoLight.otf';
 
 export default createGlobalStyle`
   * {
@@ -55,6 +56,11 @@ export default createGlobalStyle`
   @font-face {
     font-family: "SFProHeavy";
     src: local('SFProHeavy'), url(${SFProHeavy}) format('opentype');
+  }
+  
+  @font-face {
+    font-family: "SFProLight";
+    src: local('SFProLight'), url(${SFProLight}) format('opentype');
   }
 
   body, input, button, #root {

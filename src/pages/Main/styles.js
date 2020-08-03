@@ -162,7 +162,7 @@ export const Info = styled.section`
     }
 
     h2 {
-      font: 21px 'SFProHeavy';
+      font: 19px 'SFProHeavy';
       color: #141530;
       text-transform: uppercase;
       grid-column: 1/9;
@@ -170,7 +170,8 @@ export const Info = styled.section`
 
     h4 {
       font: 20px 'SFPro';
-      color: #535353;
+      color: #636363;
+
       grid-column: 1/9;
     }
 
@@ -195,12 +196,11 @@ export const Info = styled.section`
     }
 
     h4 {
-      color: #535353;
       grid-column: 2/8;
       margin-top: 23px;
       font: 24px/30px 'SFPro';
-      letter-spacing: 0px;
-      color: #535353;
+      letter-spacing: 0.5px;
+      color: #636363;
       margin-bottom: 44px;
     }
 
@@ -249,7 +249,7 @@ export const Services = styled.section`
 
     h2 {
       font: 20px 'SFPro';
-      letter-spacing: 0px;
+      letter-spacing: 0.5px;
       color: #535353;
       margin-top: 10px;
     }
@@ -259,15 +259,19 @@ export const Services = styled.section`
     ul {
       grid-column: 2/8;
       display: flex;
-      justify-content: space-between;
+      grid-gap: 20px;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
+      /* justify-content: space-between; */
     }
 
     li {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       text-align: center;
-      margin-top: 40px;
+      margin-top: 0px;
       position: relative;
 
       width: 381px;
@@ -279,11 +283,11 @@ export const Services = styled.section`
     }
 
     img {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     strong {
-      font: 22px 'SFProBold';
+      font: 20px 'SFProBold';
       letter-spacing: 0px;
       color: #1e1e1e;
       text-transform: uppercase;
@@ -291,10 +295,10 @@ export const Services = styled.section`
     }
 
     h2 {
-      font: 20px/30px 'SFPro';
-      letter-spacing: 0px;
-      color: #535353;
-      margin-top: 10px;
+      font: 18px 'SFPro';
+      letter-spacing: 0.5px;
+      color: #636363;
+      margin-top: 0px;
     }
   }
 `;
@@ -306,6 +310,7 @@ export const Highlights = styled.section`
   text-align: center;
   width: 100%;
   margin: 0 auto;
+  margin-top: 40px;
 
   text-align: center;
   margin-bottom: 200px;
@@ -348,35 +353,35 @@ export const Highlights = styled.section`
 
   @media screen and (min-width: 900px) {
     height: 373px;
-    margin-top: 73px;
+    margin-top: 113px;
     background: #f3f6f6;
+    text-align: center;
 
     strong {
-      letter-spacing: 0px;
-      color: #1e1e1e;
-      text-transform: uppercase;
       grid-row: 1;
       margin-top: 51px;
 
-      grid-column: 3/5;
-      font: 32px 'SFProBold';
-      width: 522px;
+      grid-column: 3/6;
       height: 48px;
+
       text-align: left;
+      font: 40px/48px 'SFProHeavy';
+      letter-spacing: 0;
+      width: 100%;
+      color: #1e1e1e;
+      text-transform: uppercase;
     }
 
     h2 {
-      margin-top: 22px;
-
+      margin-top: 132px;
       grid-column: 3/5;
       grid-row: 1;
-      margin-top: 120px;
       text-align: left;
-
-      font: 22px 'SFPro';
-      letter-spacing: 0px;
-      color: #535353;
-      width: 523px;
+      align-self: flex-start;
+      font: 21px 'SFProLight';
+      letter-spacing: 0.5px;
+      color: #636363;
+      width: 120%;
       height: 99px;
     }
 
@@ -385,14 +390,15 @@ export const Highlights = styled.section`
       grid-column: 6/9;
     }
     img {
-      width: 60%;
+      width: 90%;
+      margin-top: -80px;
     }
 
     a {
       grid-column: 3/5;
       grid-row: 1;
-      margin-top: 240px;
-      align-self: flex-start;
+      margin-top: 250px;
+      justify-self: center;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -400,10 +406,13 @@ export const Highlights = styled.section`
       background: #145ca7;
       border: 2px solid #145ca7;
       border-radius: 35px;
-      width: 80%;
-      font: 21px 'SFProBold';
-      letter-spacing: 0px;
+      width: 95%;
+      font: 22px 'SFProSemibold';
+      letter-spacing: 1px;
       color: #fff;
+      padding: 16px 35px;
+      margin-left: 0px;
+      user-select: none;
 
       &:hover {
         background: #3a99d7;
