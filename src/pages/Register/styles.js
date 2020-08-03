@@ -164,6 +164,7 @@ export const FormContainer = styled.section`
   }
   @media screen and (min-width: 100px) {
     grid-column: 1/9;
+    width: 100%;
   }
 `;
 
