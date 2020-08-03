@@ -76,12 +76,16 @@ export default function Register() {
                   flexDirection: 'row',
                   width: 340,
                   height: 80,
+                  backgroundColor: '#f8f',
                 }}
               >
                 <SmallSelect
                   title="Gênero"
                   placeholder="Selecione..."
-                  style={{ display: 'block', marginVertical: 20 }}
+                  style={{
+                    display: 'block',
+                    backgroundColor: '#489',
+                  }}
                 />
                 <Input
                   title="Data de Nascimento"
