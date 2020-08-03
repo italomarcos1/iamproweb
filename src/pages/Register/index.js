@@ -87,9 +87,6 @@ export default function Register() {
               alwaysShowMask
               onChange={e => setPhone(e.target.value)}
               value={phone}
-              style={
-                isDesktop === true ? { display: 'block' } : { width: '100%' }
-              }
             />
           </InputContainer>
           <InputContainer
@@ -102,11 +99,7 @@ export default function Register() {
             />
           </InputContainer>
           <InputContainer
-            style={
-              isDesktop === true
-                ? { display: 'flex', width: '100%', alignSelf: 'center' }
-                : { height: 177 }
-            }
+            style={isDesktop === true ? { display: 'flex' } : { height: 177 }}
           >
             <TextArea title="Serviços que Oferece" full={isDesktop} />
           </InputContainer>

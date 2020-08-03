@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
+  width: 340px;
   height: 60px;
-
+  background-color: #444;
   div {
     display: flex;
     justify-content: center;
@@ -30,7 +30,6 @@ export const Container = styled.div`
       border: 1px solid #aaa;
       border-radius: 4px;
       padding: 15px 20px;
-      margin-left: 0px;
       border-bottom-left-radius: 0px;
       border-top-left-radius: 0px;
 

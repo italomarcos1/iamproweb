@@ -19,7 +19,7 @@ export const Title = styled.small`
 `;
 
 export const Input = styled.textarea`
-  width: 100%;
+  width: ${({ full }) => (full ? '100%' : '340px')};
   height: 150px;
   resize: none;
   margin-top: 7px;
