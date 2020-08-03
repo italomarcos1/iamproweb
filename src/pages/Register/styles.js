@@ -29,7 +29,6 @@ export const Container = styled.div`
     #register,
     #phone {
       margin-top: 0px;
-
       display: block;
     }
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container, Input, Title } from './styles';
+import { Container, Title } from './styles';
 import InputMask from './inputmask';
 
 export default function CustomInput({ title, full, style, name, ...rest }) {

@@ -25,13 +25,12 @@ import InputMask from '../../components/InputMask';
 export default function Register() {
   const [phone, setPhone] = useState('');
   const [color, setColor] = useState('#fff');
-  const [selectWidth, setSelectWidth] = useState(340);
   const isDesktop = useMediaQuery({ query: '(min-device-width: 900px)' });
 
   useEffect(() => {
     if (isDesktop) setColor('#f0f');
     else setColor('#ff0');
-  }, []);
+  }, [isDesktop]);
 
   return (
     <Container>
@@ -55,7 +54,7 @@ export default function Register() {
           <img src={smartphone} alt="phone" />
         </div>
         <Form onSubmit={() => {}}>
-          <InputContainer id="inputcontainer">
+          <InputContainer>
             <Input title="Nome Completo" placeholder="Informe seu nome" />
 
             <SmallSelect
@@ -71,7 +70,7 @@ export default function Register() {
               style={
                 isDesktop === true
                   ? { display: 'none' }
-                  : { display: 'block', marginTop: 20 }
+                  : { display: 'block', marginVertical: 20 }
               }
             />
             <Input
@@ -80,7 +79,7 @@ export default function Register() {
               style={{ backgroundColor: color }}
             />
           </InputContainer>
-          <InputContainer id="inputcontainer">
+          <InputContainer>
             <Input title="Email" placeholder="Informe seu email" />
             <InputMask
               title="Celular MG"
@@ -91,7 +90,7 @@ export default function Register() {
               value={phone}
             />
           </InputContainer>
-          <InputContainer id="inputcontainer">
+          <InputContainer>
             <Input title="Profissão" placeholder="Informe sua profissão" />
             <Input
               title="Qual a área de cobertura que atua em MG?"
