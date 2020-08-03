@@ -219,8 +219,6 @@ export const InputContainer = styled.div`
     grid-column: 2/8;
     flex-direction: column;
     width: 100%;
-    margin-top: 40px;
-
     input {
       width: 100%;
     }

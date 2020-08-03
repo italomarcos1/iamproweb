@@ -54,9 +54,10 @@ export default function Register() {
           <img src={smartphone} alt="phone" />
         </div>
         <Form onSubmit={() => {}}>
-          <InputContainer>
+          <InputContainer
+            style={isDesktop === true ? { display: 'flex' } : { height: 220 }}
+          >
             <Input title="Nome Completo" placeholder="Informe seu nome" />
-
             <SmallSelect
               title="Gênero"
               placeholder="Selecione..."
@@ -79,7 +80,9 @@ export default function Register() {
               style={{ backgroundColor: color }}
             />
           </InputContainer>
-          <InputContainer>
+          <InputContainer
+            style={isDesktop === true ? { display: 'flex' } : { height: 140 }}
+          >
             <Input title="Email" placeholder="Informe seu email" />
             <InputMask
               title="Celular MG"
@@ -88,9 +91,14 @@ export default function Register() {
               alwaysShowMask
               onChange={e => setPhone(e.target.value)}
               value={phone}
+              style={
+                isDesktop === true ? { display: 'block' } : { width: '100%' }
+              }
             />
           </InputContainer>
-          <InputContainer>
+          <InputContainer
+            style={isDesktop === true ? { display: 'flex' } : { height: 140 }}
+          >
             <Input title="Profissão" placeholder="Informe sua profissão" />
             <Input
               title="Qual a área de cobertura que atua em MG?"

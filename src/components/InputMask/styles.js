@@ -23,7 +23,7 @@ export const Container = styled.div`
         border-right-width: 0px;
       }
 
-      width: 268px;
+      width: 278px;
       height: 50px;
       margin-top: 7px;
       background-color: #fff;
