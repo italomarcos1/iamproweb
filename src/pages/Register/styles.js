@@ -175,7 +175,7 @@ export const Form = styled(TForm)`
 
   @media screen and (min-width: 100px) {
     grid-column: 1/9;
-    width: 80%;
+    width: 100%;
     margin: 20px auto;
     #registerWeb {
       display: none;
