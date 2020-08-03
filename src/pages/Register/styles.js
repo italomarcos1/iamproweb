@@ -162,6 +162,9 @@ export const FormContainer = styled.section`
   img {
     width: 150%;
   }
+  @media screen and (min-width: 100px) {
+    grid-column: 1/9;
+  }
 `;
 
 export const Form = styled(TForm)`
@@ -217,6 +220,8 @@ export const InputContainer = styled.div`
 
   @media screen and (min-width: 100px) {
     flex-direction: column;
+    grid-column: 1/9;
+
     width: 100%;
     input {
       width: 100%;
