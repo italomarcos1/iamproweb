@@ -427,22 +427,21 @@ export const EasyToHire = styled.section`
   grid-template-columns: repeat(8, 1fr);
   gap: 10px;
 
-  text-align: center;
   width: 100%;
   margin: 0 auto;
 
-  grid-column: 2/8;
+  grid-column: 3/8;
 
-  div {
-    align-self: center;
-    background-color: #3a99d7;
+  #phonebottom {
+    align-self: flex-end;
+    /* background-color: #3af9d7; */
 
-    grid-column: 3/4;
+    grid-column: 3/5;
     grid-row: 1;
   }
 
   img {
-    width: 150%;
+    width: 120%;
   }
 `;
 
@@ -451,6 +450,8 @@ export const EasyToHireInfo = styled.div`
   width: 100%;
   margin: 20px auto;
 
+  /* background-color: #0009f7; */
+
   @media screen and (min-width: 100px) {
     grid-column: 1/9;
     width: 80%;
@@ -458,48 +459,80 @@ export const EasyToHireInfo = styled.div`
   }
 
   @media screen and (min-width: 900px) {
-    grid-column: 4/7;
+    grid-column: 5/8;
     width: 100%;
     margin: 20px auto;
-    margin-left: 60px;
     display: flex;
     flex-direction: column;
 
-    button {
-      width: 408px;
-      height: 70px;
-      margin-top: 30px;
-      padding: 20px 37px;
-      background: #0fcc96;
-      border: 2px solid #0fcc96;
-      border-radius: 35px;
-      font: 26px/31px 'SFProBold';
-      letter-spacing: 0px;
-      color: #fff;
-
-      &:hover {
-        background-color: #0cb587;
-        border-color: #0cb587;
-      }
-    }
-
-    h2 {
+    strong {
       grid-column: 2/8;
-      text-align: center;
+      text-align: left;
       font: 40px/48px 'SFProHeavy';
       letter-spacing: 0px;
       color: #1e1e1e;
       text-transform: uppercase;
     }
 
-    h4 {
-      color: #535353;
+    h3 {
       grid-column: 2/8;
       margin-top: 23px;
-      font: 24px/30px 'SFPro';
-      letter-spacing: 0px;
-      color: #535353;
+      font: 20px 'SFPro';
+      letter-spacing: 0.5px;
+      color: #636363;
+      text-align: left;
       margin-bottom: 44px;
     }
+
+    ul {
+      display: flex;
+
+      flex-direction: column;
+
+      li {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+
+        img {
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-left: 20px;
+          h2 {
+            font: 20px 'SFProBold';
+            letter-spacing: 0px;
+            color: #1e1e1e;
+            text-transform: uppercase;
+            margin-top: 20px;
+            text-align: left;
+          }
+
+          h4 {
+            font: 18px 'SFPro';
+            letter-spacing: 0.5px;
+            color: #636363;
+            line-height: 28px;
+            margin-top: 10px;
+            text-align: left;
+          }
+        }
+      }
+    }
   }
+`;
+
+export const Bubbles = styled.section`
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+
+  width: 100%;
+  margin: 0 auto;
 `;
