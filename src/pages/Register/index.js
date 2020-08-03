@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import {
@@ -23,12 +23,12 @@ import InputMask from '../../components/InputMask';
 
 export default function Register() {
   const [phone, setPhone] = useState('');
+  const [color, setColor] = useState('#fff');
   const isDesktop = useMediaQuery({ query: '(min-device-width: 900px)' });
 
-  React.useEffect(() => {
-    if (isDesktop) {
-      console.log('dtop');
-    }
+  useEffect(() => {
+    if (isDesktop) setColor('#f0f');
+    else setColor('#ff0');
   }, []);
 
   return (
@@ -60,11 +60,7 @@ export default function Register() {
             <Input
               title="Data de Nascimento"
               placeholder="DD/MM/AAAA"
-              style={
-                isDesktop === true
-                  ? { width: 340, backgroundColor: '#f0f' }
-                  : { width: 160, backgroundColor: '#ff0' }
-              }
+              style={{ backgroundColor: color }}
             />
           </InputContainer>
           <InputContainer id="inputcontainer">
