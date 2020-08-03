@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import banner from '../../assets/banner.jpg';
 import bannermobile from '../../assets/headerbg.png';
 
@@ -6,15 +7,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
 
-  @media screen and (min-width: 50px) {
-    #participe {
-      background-color: #145ca7;
-      height: 74px;
-      width: 100%;
-      font: 22px 'SFProBold';
-      letter-spacing: 0px;
-      color: #fff;
-    }
+  @media screen and (min-width: 100px) {
     #phone {
       display: block;
       margin-top: 40px;
@@ -82,7 +75,7 @@ export const Logo = styled.div`
   }
 `;
 
-export const RegisterButton = styled.a`
+export const RegisterButton = styled(Link)`
   text-align: center;
   display: flex;
   align-items: center;
@@ -136,7 +129,7 @@ export const Content = styled.div`
     font: 22px 'SFProBold';
     letter-spacing: 0px;
     color: #fff;
-
+    user-select: none;
     &:hover {
       background: #3a99d7;
       border: 2px solid #3a99d7;

@@ -24,6 +24,7 @@ import InputMask from '../../components/InputMask';
 export default function Register() {
   const [phone, setPhone] = useState('');
   const [color, setColor] = useState('#fff');
+  const [selectWidth, setSelectWidth] = useState(340);
   const isDesktop = useMediaQuery({ query: '(min-device-width: 900px)' });
 
   useEffect(() => {
@@ -56,7 +57,7 @@ export default function Register() {
           <InputContainer id="inputcontainer">
             <Input title="Nome Completo" placeholder="Informe seu nome" />
 
-            <SmallSelect title="Gênero" placeholder="Selecione..." />
+            <SmallSelect title="Gênero" placeholder="Selecione..." style={{}} />
             <Input
               title="Data de Nascimento"
               placeholder="DD/MM/AAAA"
@@ -82,7 +83,9 @@ export default function Register() {
             />
           </InputContainer>
           <TextArea title="Serviços que Oferece"></TextArea>
-          <button type="button">Cadastre-se Gratuitamente</button>
+          <button id="registerWeb" type="button">
+            Cadastre-se Gratuitamente
+          </button>
         </Form>
       </FormContainer>
       <FinishButton id="finishbutton">Cadastre-se Gratuitamente</FinishButton>

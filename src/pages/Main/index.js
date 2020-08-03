@@ -92,11 +92,9 @@ export default function Main() {
         <div>
           <img src={cards} alt="cards" />
         </div>
-        <Link to="/register" id="registerWeb">
-          Cadastre-se Gratuitamente
-        </Link>
+        <Link to="/register">Cadastre-se Gratuitamente</Link>
       </Highlights>
-      <RegisterButton to="/register" id="register">
+      <RegisterButton to="/register" id="participe">
         Cadastre-se Gratuitamente
       </RegisterButton>
       <EasyToHire>

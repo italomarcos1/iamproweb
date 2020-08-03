@@ -173,6 +173,9 @@ export const Form = styled(TForm)`
     grid-column: 1/9;
     width: 80%;
     margin: 20px auto;
+    #registerWeb {
+      display: none;
+    }
   }
 
   @media screen and (min-width: 900px) {
@@ -180,7 +183,9 @@ export const Form = styled(TForm)`
     width: 100%;
     margin: 20px auto;
     margin-left: 60px;
-
+    #registerWeb {
+      display: block;
+    }
     button {
       width: 408px;
       height: 70px;
