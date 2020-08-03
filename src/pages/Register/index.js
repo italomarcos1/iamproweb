@@ -31,6 +31,8 @@ export default function Register() {
   //   if (isDesktop) setColor('#f0f');
   //   else setColor('#ff0');
   // }, [isDesktop]);
+  
+  const handleSubmit = data => console.log(data);
 
   return (
     <Container>
@@ -54,10 +56,10 @@ export default function Register() {
         <div id="phone">
           <img src={smartphone} alt="phone" />
         </div>
-        <Form onSubmit={() => {}}>
+        <Form onSubmit={handleSubmit}>
           {isDesktop === true ? (
             <InputContainer>
-              <Input title="Nome Completo" placeholder="Informe seu nome" />
+              <Input value="Ramires Gomes" name="name" title="Nome Completo" placeholder="Informe seu nome" />
               <SmallSelect title="Gênero" placeholder="Selecione..." />
               <Input
                 title="Data de Nascimento"
@@ -68,7 +70,7 @@ export default function Register() {
           ) : (
             <>
               <InputContainer>
-                <Input title="Nome Completo" placeholder="Informe seu nome" />
+                <Input value="Ramires Gomes" name="name" title="Nome Completo" placeholder="Informe seu nome" />
               </InputContainer>
 
               <InputContainer
@@ -82,12 +84,15 @@ export default function Register() {
                 <SmallSelect
                   title="Gênero"
                   placeholder="Selecione..."
+                  name="gender"
                   style={{
                     display: 'block',
                     marginRight: 10,
                   }}
                 />
                 <Input
+                    value="26/10/1992"
+                  name="birth"
                   title="Data de Nascimento"
                   placeholder="DD/MM/AAAA"
                   style={{
@@ -102,29 +107,32 @@ export default function Register() {
           <InputContainer
             style={isDesktop === true ? { display: 'flex' } : { height: 140 }}
           >
-            <Input title="Email" placeholder="Informe seu email" />
+            <Input value="ramires.gb@gmail.com" name="email" title="Email" placeholder="Informe seu email" />
             <InputMask
+              value="991491885"
               title="Celular MG"
-              name="phone"
+              name="cellphone"
               mask="9999 9999"
               alwaysShowMask
               onChange={e => setPhone(e.target.value)}
-              value={phone}
+              // value={phone}
             />
           </InputContainer>
           <InputContainer
             style={isDesktop === true ? { display: 'flex' } : { height: 140 }}
           >
-            <Input title="Profissão" placeholder="Informe sua profissão" />
+            <Input value="Programador" name="occupation" title="Profissão" placeholder="Informe sua profissão" />
             <Input
+                value="Desenvolvimento web"
+              name="operation"
               title="Qual a área de cobertura que atua em MG?"
               placeholder="Informe sua área de cobertura"
             />
           </InputContainer>
           <InputContainer style={{ height: 177 }}>
-            <TextArea title="Serviços que Oferece" full={isDesktop} />
+            <TextArea value="..... . . . . .. ." name="services" title="Serviços que Oferece" full={isDesktop} />
           </InputContainer>
-          <button id="registerWeb" type="button">
+          <button id="registerWeb" type="submit">
             Cadastre-se Gratuitamente
           </button>
         </Form>
