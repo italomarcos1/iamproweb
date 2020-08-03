@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 340px;
+  width: ${({ full }) => (full ? '100%' : '340px')};
+
   height: 177px;
   margin-top: 20px;
 `;
