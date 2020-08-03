@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
+  width: ${({ full }) => (full ? '100%' : '340px')};
+
   height: 177px;
-  margin-top: 20px;
 `;
 
 export const Title = styled.small`
@@ -18,7 +18,7 @@ export const Title = styled.small`
 `;
 
 export const Input = styled.textarea`
-  width: 100%;
+  width: ${({ full }) => (full ? '100%' : '340px')};
   height: 150px;
   resize: none;
   margin-top: 7px;

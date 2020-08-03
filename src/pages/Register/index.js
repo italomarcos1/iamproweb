@@ -24,13 +24,13 @@ import InputMask from '../../components/InputMask';
 
 export default function Register() {
   const [phone, setPhone] = useState('');
-  const [color, setColor] = useState('#fff');
+  // const [color, setColor] = useState('#fff');
   const isDesktop = useMediaQuery({ query: '(min-device-width: 900px)' });
 
-  useEffect(() => {
-    if (isDesktop) setColor('#f0f');
-    else setColor('#ff0');
-  }, [isDesktop]);
+  // useEffect(() => {
+  //   if (isDesktop) setColor('#f0f');
+  //   else setColor('#ff0');
+  // }, [isDesktop]);
 
   return (
     <Container>
@@ -49,37 +49,56 @@ export default function Register() {
           <br /> Participe do maior Aplicativo de Minas Gerais.
         </h4>
       </Info>
+
       <FormContainer>
         <div id="phone">
           <img src={smartphone} alt="phone" />
         </div>
         <Form onSubmit={() => {}}>
-          <InputContainer
-            style={isDesktop === true ? { display: 'flex' } : { height: 220 }}
-          >
-            <Input title="Nome Completo" placeholder="Informe seu nome" />
-            <SmallSelect
-              title="Gênero"
-              placeholder="Selecione..."
-              style={
-                isDesktop === true ? { display: 'block' } : { display: 'none' }
-              }
-            />
-            <Select
-              title="Gênero"
-              placeholder="Selecione..."
-              style={
-                isDesktop === true
-                  ? { display: 'none' }
-                  : { display: 'block', marginVertical: 20 }
-              }
-            />
-            <Input
-              title="Data de Nascimento"
-              placeholder="DD/MM/AAAA"
-              style={{ backgroundColor: color }}
-            />
-          </InputContainer>
+          {isDesktop == true ? (
+            <InputContainer>
+              <Input title="Nome Completo" placeholder="Informe seu nome" />
+              <SmallSelect title="Gênero" placeholder="Selecione..." />
+              <Input
+                title="Data de Nascimento"
+                placeholder="DD/MM/AAAA"
+                style={{ width: 160 }}
+              />
+            </InputContainer>
+          ) : (
+            <>
+              <InputContainer>
+                <Input title="Nome Completo" placeholder="Informe seu nome" />
+              </InputContainer>
+
+              <InputContainer
+                style={{
+                  flexDirection: 'row',
+                  width: '100%',
+                  height: 60,
+                  justifyContent: 'center',
+                }}
+              >
+                <SmallSelect
+                  title="Gênero"
+                  placeholder="Selecione..."
+                  style={{
+                    display: 'block',
+                    marginRight: 10,
+                  }}
+                />
+                <Input
+                  title="Data de Nascimento"
+                  placeholder="DD/MM/AAAA"
+                  style={{
+                    width: 160,
+                    marginLeft: 10,
+                  }}
+                />
+              </InputContainer>
+            </>
+          )}
+
           <InputContainer
             style={isDesktop === true ? { display: 'flex' } : { height: 140 }}
           >
@@ -91,9 +110,6 @@ export default function Register() {
               alwaysShowMask
               onChange={e => setPhone(e.target.value)}
               value={phone}
-              style={
-                isDesktop === true ? { display: 'block' } : { width: '100%' }
-              }
             />
           </InputContainer>
           <InputContainer
@@ -105,12 +121,9 @@ export default function Register() {
               placeholder="Informe sua área de cobertura"
             />
           </InputContainer>
-          <TextArea
-            title="Serviços que Oferece"
-            style={
-              isDesktop === true ? { display: 'block' } : { width: '100%' }
-            }
-          ></TextArea>
+          <InputContainer style={{ height: 177 }}>
+            <TextArea title="Serviços que Oferece" full={isDesktop} />
+          </InputContainer>
           <button id="registerWeb" type="button">
             Cadastre-se Gratuitamente
           </button>

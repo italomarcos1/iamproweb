@@ -162,6 +162,10 @@ export const FormContainer = styled.section`
   img {
     width: 150%;
   }
+  @media screen and (min-width: 100px) {
+    grid-column: 1/9;
+    width: 100%;
+  }
 `;
 
 export const Form = styled(TForm)`
@@ -171,7 +175,7 @@ export const Form = styled(TForm)`
 
   @media screen and (min-width: 100px) {
     grid-column: 1/9;
-    width: 80%;
+    width: 100%;
     margin: 20px auto;
     #registerWeb {
       display: none;
@@ -216,8 +220,9 @@ export const InputContainer = styled.div`
   margin-top: 20px;
 
   @media screen and (min-width: 100px) {
-    grid-column: 1/9;
     flex-direction: column;
+    grid-column: 1/9;
+    align-items: center;
     width: 100%;
     input {
       width: 100%;
@@ -243,12 +248,12 @@ export const FinishButton = styled.button`
   height: 70px;
   margin-top: 50px;
   border-radius: 0px;
-  padding: 20px 37px;
   background: #0fcc96;
   border: 2px solid #0fcc96;
-  font: 26px/31px 'SFProBold';
+  font: 20px 'SFProBold';
   letter-spacing: 0px;
   color: #fff;
+  text-align: center;
 
   &:hover {
     background-color: #0cb587;

@@ -7,7 +7,7 @@ export default function CustomInput({ title, full, ...rest }) {
   return (
     <Container full={full}>
       <Title>{title}</Title>
-      <Input {...rest} />
+      <Input full={full} {...rest} />
     </Container>
   );
 }
