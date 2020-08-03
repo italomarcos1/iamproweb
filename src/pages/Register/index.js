@@ -88,7 +88,9 @@ export default function Register() {
               onChange={e => setPhone(e.target.value)}
               value={phone}
               style={
-                isDesktop === true ? { display: 'block' } : { width: '100%' }
+                isDesktop === true
+                  ? { display: 'block' }
+                  : { width: '100%', alignSelf: 'center' }
               }
             />
           </InputContainer>

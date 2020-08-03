@@ -30,7 +30,7 @@ export const Container = styled.div`
       border: 1px solid #aaa;
       border-radius: 4px;
       padding: 15px 20px;
-      margin-left: 0px;
+      margin-left: 20px;
       border-bottom-left-radius: 0px;
       border-top-left-radius: 0px;
 
