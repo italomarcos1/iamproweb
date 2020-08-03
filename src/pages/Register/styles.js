@@ -216,7 +216,6 @@ export const InputContainer = styled.div`
   margin-top: 20px;
 
   @media screen and (min-width: 100px) {
-    grid-column: 1/9;
     flex-direction: column;
     width: 100%;
     input {
