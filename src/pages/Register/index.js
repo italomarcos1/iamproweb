@@ -98,9 +98,7 @@ export default function Register() {
               placeholder="Informe sua área de cobertura"
             />
           </InputContainer>
-          <InputContainer
-            style={isDesktop === true ? { display: 'flex' } : { height: 177 }}
-          >
+          <InputContainer style={{ height: 177 }}>
             <TextArea title="Serviços que Oferece" full={isDesktop} />
           </InputContainer>
           <button id="registerWeb" type="button">

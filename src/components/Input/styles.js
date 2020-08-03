@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: ${({ full }) => (full ? '100%' : '340px')};
   height: ${({ full }) => (full ? '75px' : '60px')};
-  background-color: #444;
 `;
 
 export const Title = styled.small`
