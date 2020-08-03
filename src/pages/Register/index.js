@@ -24,13 +24,13 @@ import InputMask from '../../components/InputMask';
 
 export default function Register() {
   const [phone, setPhone] = useState('');
-  const [color, setColor] = useState('#fff');
+  // const [color, setColor] = useState('#fff');
   const isDesktop = useMediaQuery({ query: '(min-device-width: 900px)' });
 
-  useEffect(() => {
-    if (isDesktop) setColor('#f0f');
-    else setColor('#ff0');
-  }, [isDesktop]);
+  // useEffect(() => {
+  //   if (isDesktop) setColor('#f0f');
+  //   else setColor('#ff0');
+  // }, [isDesktop]);
 
   return (
     <Container>
@@ -77,11 +77,7 @@ export default function Register() {
             <Input title="Data de Nascimento" placeholder="DD/MM/AAAA" />
           </InputContainer>
           <InputContainer
-            style={
-              isDesktop === true
-                ? { display: 'flex' }
-                : { height: 140, backgroundColor: '#333' }
-            }
+            style={isDesktop === true ? { display: 'flex' } : { height: 140 }}
           >
             <Input title="Email" placeholder="Informe seu email" />
             <InputMask
@@ -92,9 +88,7 @@ export default function Register() {
               onChange={e => setPhone(e.target.value)}
               value={phone}
               style={
-                isDesktop === true
-                  ? { display: 'block' }
-                  : { marginLeft: 10, width: '100%' }
+                isDesktop === true ? { display: 'block' } : { width: '100%' }
               }
             />
           </InputContainer>

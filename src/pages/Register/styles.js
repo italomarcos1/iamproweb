@@ -250,7 +250,7 @@ export const FinishButton = styled.button`
   border-radius: 0px;
   background: #0fcc96;
   border: 2px solid #0fcc96;
-  font: 26px/31px 'SFProBold';
+  font: 20px 'SFProBold';
   letter-spacing: 0px;
   color: #fff;
   text-align: center;
