@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Select from 'react-select';
+import { useField } from '@unform/core';
 
 import PropTypes from 'prop-types';
 
@@ -11,11 +12,45 @@ const colourOptions = [
   { value: 'Outro', label: 'Outro', color: '#145ca7' },
 ];
 
-export default function SelectInput({ title, data, placeholder, style }) {
+export default function SelectInput({
+  title,
+  data,
+  placeholder,
+  style,
+  name,
+  ...rest
+}) {
+  const selectRef = useRef(null);
+  const { fieldName, defaultValue, registerField /* error */ } = useField(name);
+
+  useEffect(() => {
+    registerField({
+      name: fieldName,
+      ref: selectRef.current,
+      path: 'select.state.value',
+      getValue(ref) {
+        if (rest.isMulti) {
+          if (!ref.select.state.value) {
+            return [];
+          }
+
+          return ref.select.state.value.map(option => option.label);
+        }
+        if (!ref.select.state.value) {
+          return '';
+        }
+
+        return ref.select.state.value.label;
+      },
+    });
+  }, [fieldName, registerField, rest.isMulti]);
+
   return (
     <Container style={style}>
       <Title>{title}</Title>
       <Select
+        {...rest}
+        ref={selectRef}
         placeholder={placeholder}
         options={data || colourOptions}
         styles={styles}
