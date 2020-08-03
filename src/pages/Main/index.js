@@ -29,16 +29,16 @@ import profissional1 from '../../assets/objetivoDoAplicativo.png';
 import profissional2 from '../../assets/profissional.png';
 import profissional3 from '../../assets/clientes.png';
 
-import bubble1 from '../../assets/babysitters.png';
-import bubble2 from '../../assets/barber.png';
-import bubble3 from '../../assets/cabeleireiros.png';
-import bubble4 from '../../assets/cleaner.png';
-import bubble5 from '../../assets/dj.png';
-import bubble6 from '../../assets/eletricista.png';
-import bubble7 from '../../assets/encanador.png';
-import bubble8 from '../../assets/fotografos.png';
-import bubble9 from '../../assets/medico.png';
-import bubble10 from '../../assets/passeioComCao.png';
+import babysitters from '../../assets/babysitters.png';
+import barber from '../../assets/barber.png';
+import cabeleireiros from '../../assets/cabeleireiros.png';
+import cleaner from '../../assets/cleaner.png';
+import dj from '../../assets/dj.png';
+import eletricista from '../../assets/eletricista.png';
+import encanador from '../../assets/encanador.png';
+import fotografos from '../../assets/fotografos.png';
+import medico from '../../assets/medico.png';
+import passeioComCao from '../../assets/passeioComCao.png';
 
 export default function Main() {
   return (
@@ -163,16 +163,16 @@ export default function Main() {
         </EasyToHireInfo>
       </EasyToHire>
       <Bubbles>
-        <img src={bubble1} alt="" />
-        <img src={bubble2} alt="" />
-        <img src={bubble3} alt="" />
-        <img src={bubble4} alt="" />
-        <img src={bubble5} alt="" />
-        <img src={bubble6} alt="" />
-        <img src={bubble7} alt="" />
-        <img src={bubble8} alt="" />
-        <img src={bubble9} alt="" />
-        <img src={bubble10} alt="" />
+        <img src={cabeleireiros} alt="" style={{ width: 192, height: 192 }} />
+        <img src={encanador} alt="" style={{ width: 313, height: 313 }} />
+        <img src={babysitters} alt="" style={{ width: 192, height: 192 }} />
+        <img src={cleaner} alt="" style={{ width: 295, height: 295 }} />
+        <img src={eletricista} alt="" style={{ width: 180, height: 180 }} />
+        <img src={fotografos} alt="" style={{ width: 133, height: 133 }} />
+        <img src={barber} alt="" style={{ width: 229, height: 229 }} />
+        <img src={dj} alt="" style={{ width: 168, height: 168 }} />
+        <img src={passeioComCao} alt="" style={{ width: 195, height: 195 }} />
+        <img src={medico} alt="" style={{ width: 169, height: 169 }} />
       </Bubbles>
     </Container>
   );

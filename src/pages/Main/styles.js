@@ -529,10 +529,15 @@ export const EasyToHireInfo = styled.div`
 `;
 
 export const Bubbles = styled.section`
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 10px;
+  display: flex;
 
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+  img {
+    width: 313px;
+    height: 313px;
+  }
 `;
