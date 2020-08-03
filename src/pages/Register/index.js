@@ -110,12 +110,7 @@ export default function Register() {
           <InputContainer
             style={isDesktop === true ? { display: 'flex' } : { height: 177 }}
           >
-            <TextArea
-              title="Serviços que Oferece"
-              style={
-                isDesktop === true ? { display: 'block' } : { width: '100%' }
-              }
-            />
+            <TextArea title="Serviços que Oferece" />
           </InputContainer>
           <button id="registerWeb" type="button">
             Cadastre-se Gratuitamente

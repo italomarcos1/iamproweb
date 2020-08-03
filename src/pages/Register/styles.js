@@ -248,12 +248,12 @@ export const FinishButton = styled.button`
   height: 70px;
   margin-top: 50px;
   border-radius: 0px;
-  padding: 20px 37px;
   background: #0fcc96;
   border: 2px solid #0fcc96;
   font: 26px/31px 'SFProBold';
   letter-spacing: 0px;
   color: #fff;
+  text-align: center;
 
   &:hover {
     background-color: #0cb587;
