@@ -78,7 +78,7 @@ export default function Register() {
               <InputContainer
                 style={{
                   flexDirection: 'row',
-                  width: 340,
+                  width: '100%',
                   height: 80,
                   backgroundColor: '#f8f',
                 }}
