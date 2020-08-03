@@ -58,7 +58,11 @@ export default function Register() {
           {isDesktop === true ? (
             <InputContainer>
               <Input title="Nome Completo" placeholder="Informe seu nome" />
-              <SmallSelect title="Gênero" placeholder="Selecione..." />
+              <SmallSelect
+                name="gender"
+                title="Gênero"
+                placeholder="Selecione..."
+              />
               <Input
                 title="Data de Nascimento"
                 placeholder="DD/MM/AAAA"
@@ -80,6 +84,7 @@ export default function Register() {
                 }}
               >
                 <SmallSelect
+                  name="gender"
                   title="Gênero"
                   placeholder="Selecione..."
                   style={{
