@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container, Input, Title } from './styles';
+import { Container, Title } from './styles';
 
-export default function CustomInput({ title, full, style, ...rest }) {
+import Input from './input';
+
+export default function CustomInput({ name, title, full, style, ...rest }) {
   return (
     <Container full={full} style={style}>
       <Title>{title}</Title>
-      <Input {...rest} />
+      <Input name={name} {...rest} />
     </Container>
   );
 }

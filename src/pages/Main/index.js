@@ -233,6 +233,9 @@ export default function Main() {
           </>
         )}
       </Bubbles>
+      <RegisterButton to="/register" id="participe">
+        Cadastre-se Gratuitamente
+      </RegisterButton>
     </Container>
   );
 }
