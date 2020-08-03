@@ -27,20 +27,16 @@ export default function SelectInput({
     registerField({
       name: fieldName,
       ref: selectRef.current,
-      path: 'select.state.value',
       getValue(ref) {
         if (rest.isMulti) {
-          if (!ref.select.state.value) {
-            return [];
-          }
+          if (!ref.state.value) return [];
 
-          return ref.select.state.value.map(option => option.label);
-        }
-        if (!ref.select.state.value) {
-          return '';
+          return ref.state.value.map(option => option.value);
         }
 
-        return ref.select.state.value.label;
+        if (!ref.state.value) return '';
+
+        return ref.state.value.value;
       },
     });
   }, [fieldName, registerField, rest.isMulti]);

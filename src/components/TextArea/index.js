@@ -1,22 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container, Input, Title } from './styles';
+import { Container, Title } from './styles';
+import TextArea from './textarea';
 
-export default function CustomInput({ title, full, ...rest }) {
+export default function CustomTextArea({ name, title, full, ...rest }) {
   return (
     <Container full={full}>
       <Title>{title}</Title>
-      <Input full={full} {...rest} />
+      <TextArea name={name} full={full} {...rest} />
     </Container>
   );
 }
 
-CustomInput.propTypes = {
+CustomTextArea.propTypes = {
   title: PropTypes.string.isRequired,
   full: PropTypes.bool,
 };
 
-CustomInput.defaultProps = {
+CustomTextArea.defaultProps = {
   full: false,
 };

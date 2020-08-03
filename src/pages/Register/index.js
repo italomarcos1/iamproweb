@@ -45,7 +45,7 @@ export default function Register() {
       console.log(response);
     }).catch(err => {
       setProcessing(false);
-      console.log(err);
+      // notify.show(message, type, timeout, color)
     });
   };
 
@@ -107,14 +107,13 @@ export default function Register() {
                   name="gender"
                   title="Gênero"
                   placeholder="Selecione..."
-                  name="gender"
                   style={{
                     display: 'block',
                     marginRight: 10,
                   }}
                 />
                 <Input
-                    value="26/10/1992"
+                  value="26/10/1992"
                   name="birth"
                   title="Data de Nascimento"
                   placeholder="DD/MM/AAAA"
