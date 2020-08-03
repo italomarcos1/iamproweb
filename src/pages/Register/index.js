@@ -77,7 +77,11 @@ export default function Register() {
             <Input title="Data de Nascimento" placeholder="DD/MM/AAAA" />
           </InputContainer>
           <InputContainer
-            style={isDesktop === true ? { display: 'flex' } : { height: 140 }}
+            style={
+              isDesktop === true
+                ? { display: 'flex', backgroundColor: '#333' }
+                : { height: 140 }
+            }
           >
             <Input title="Email" placeholder="Informe seu email" />
             <InputMask
