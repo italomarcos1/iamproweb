@@ -74,8 +74,8 @@ export default function Register() {
               <InputContainer
                 style={{
                   flexDirection: 'row',
+                  width: 340,
                   height: 80,
-                  backgroundColor: '#7159c1',
                 }}
               >
                 <SmallSelect
