@@ -79,8 +79,8 @@ export default function Register() {
           <InputContainer
             style={
               isDesktop === true
-                ? { display: 'flex', backgroundColor: '#333' }
-                : { height: 140 }
+                ? { display: 'flex' }
+                : { height: 140, backgroundColor: '#333' }
             }
           >
             <Input title="Email" placeholder="Informe seu email" />
