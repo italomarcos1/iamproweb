@@ -80,6 +80,7 @@ export default function Register() {
                   flexDirection: 'row',
                   width: '100%',
                   height: 80,
+                  justifyContent: 'center',
                   backgroundColor: '#f8f',
                 }}
               >
