@@ -11,6 +11,8 @@ import {
   Services,
   Highlights,
   RegisterButton,
+  EasyToHire,
+  EasyToHireInfo,
 } from './styles';
 
 import logo from '../../assets/logo.png';
@@ -97,6 +99,18 @@ export default function Main() {
       <RegisterButton to="/register" id="register">
         Cadastre-se Gratuitamente
       </RegisterButton>
+      <EasyToHire>
+        <div id="phone">
+          <img src={smartphone} alt="phone" />
+        </div>
+        <EasyToHireInfo>
+          <h2>Um aplicativo fácil de contratar</h2>
+          <h4>
+            Imagine ter no seu smartphone todos os profissionais a sua <br />
+            disposição, valores por hora ou por serviço.
+          </h4>
+        </EasyToHireInfo>
+      </EasyToHire>
     </Container>
   );
 }

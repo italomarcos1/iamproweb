@@ -35,7 +35,6 @@ export const Header = styled.section`
 
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 10px;
   text-align: center;
   width: 100%;
   margin: 0 auto;
@@ -108,7 +107,7 @@ export const Content = styled.div`
   flex-direction: column;
   grid-column: 3/7;
   grid-row: 1;
-  margin-top: 134px;
+  margin-top: 104px;
   width: 70%;
 
   strong {
@@ -423,6 +422,88 @@ export const Highlights = styled.section`
         background: #3a99d7;
         border: 2px solid #3a99d7;
       }
+    }
+  }
+`;
+
+export const EasyToHire = styled.section`
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+
+  grid-column: 2/8;
+
+  div {
+    align-self: center;
+    background-color: #3a99d7;
+
+    grid-column: 3/4;
+    grid-row: 1;
+  }
+
+  img {
+    width: 150%;
+  }
+`;
+
+export const EasyToHireInfo = styled.div`
+  grid-column: 4/7;
+  width: 100%;
+  margin: 20px auto;
+
+  @media screen and (min-width: 100px) {
+    grid-column: 1/9;
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  @media screen and (min-width: 900px) {
+    grid-column: 4/7;
+    width: 100%;
+    margin: 20px auto;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+
+    button {
+      width: 408px;
+      height: 70px;
+      margin-top: 30px;
+      padding: 20px 37px;
+      background: #0fcc96;
+      border: 2px solid #0fcc96;
+      border-radius: 35px;
+      font: 26px/31px 'SFProBold';
+      letter-spacing: 0px;
+      color: #fff;
+
+      &:hover {
+        background-color: #0cb587;
+        border-color: #0cb587;
+      }
+    }
+
+    h2 {
+      grid-column: 2/8;
+      text-align: center;
+      font: 40px/48px 'SFProHeavy';
+      letter-spacing: 0px;
+      color: #1e1e1e;
+      text-transform: uppercase;
+    }
+
+    h4 {
+      color: #535353;
+      grid-column: 2/8;
+      margin-top: 23px;
+      font: 24px/30px 'SFPro';
+      letter-spacing: 0px;
+      color: #535353;
+      margin-bottom: 44px;
     }
   }
 `;

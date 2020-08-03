@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import {
   Container,
@@ -22,6 +23,14 @@ import InputMask from '../../components/InputMask';
 
 export default function Register() {
   const [phone, setPhone] = useState('');
+  const isDesktop = useMediaQuery({ query: '(min-device-width: 900px)' });
+
+  React.useEffect(() => {
+    if (isDesktop) {
+      console.log('dtop');
+    }
+  }, []);
+
   return (
     <Container>
       <Header>
@@ -51,14 +60,18 @@ export default function Register() {
             <Input
               title="Data de Nascimento"
               placeholder="DD/MM/AAAA"
-              style={{ width: 160 }}
+              style={
+                isDesktop === true
+                  ? { width: 340, backgroundColor: '#f0f' }
+                  : { width: 160, backgroundColor: '#ff0' }
+              }
             />
           </InputContainer>
           <InputContainer id="inputcontainer">
             <Input title="Email" placeholder="Informe seu email" />
             <InputMask
               title="Celular MG"
-              name="phone_number"
+              name="phone"
               mask="9999 9999"
               alwaysShowMask
               onChange={e => setPhone(e.target.value)}
