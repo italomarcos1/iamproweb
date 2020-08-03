@@ -55,30 +55,48 @@ export default function Register() {
         </div>
         <Form onSubmit={() => {}}>
           <InputContainer
-            style={isDesktop === true ? { display: 'flex' } : { height: 220 }}
+            style={
+              isDesktop === true
+                ? { display: 'flex' }
+                : { flexDirection: 'row', height: 80 }
+            }
           >
             <Input title="Nome Completo" placeholder="Informe seu nome" />
-            <SmallSelect
-              title="Gênero"
-              placeholder="Selecione..."
-              style={
-                isDesktop === true ? { display: 'block' } : { display: 'none' }
-              }
-            />
-            <Select
-              title="Gênero"
-              placeholder="Selecione..."
-              style={
-                isDesktop === true
-                  ? { display: 'none' }
-                  : { display: 'block', marginVertical: 20 }
-              }
-            />
-            <Input
-              title="Data de Nascimento"
-              placeholder="DD/MM/AAAA"
-              style={isDesktop === true ? { width: 160 } : { width: 340 }}
-            />
+            {isDesktop == true ? (
+              <>
+                <SmallSelect
+                  title="Gênero"
+                  placeholder="Selecione..."
+                  style={
+                    isDesktop === true
+                      ? { display: 'block' }
+                      : { display: 'none' }
+                  }
+                />
+                <Input
+                  title="Data de Nascimento"
+                  placeholder="DD/MM/AAAA"
+                  style={{ width: 160 }}
+                />
+              </>
+            ) : (
+              <>
+                <SmallSelect
+                  title="Gênero"
+                  placeholder="Selecione..."
+                  style={
+                    isDesktop === true
+                      ? { display: 'none' }
+                      : { display: 'block', marginVertical: 20 }
+                  }
+                />
+                <Input
+                  title="Data de Nascimento"
+                  placeholder="DD/MM/AAAA"
+                  style={{ width: 340 }}
+                />
+              </>
+            )}
           </InputContainer>
           <InputContainer
             style={isDesktop === true ? { display: 'flex' } : { height: 140 }}
