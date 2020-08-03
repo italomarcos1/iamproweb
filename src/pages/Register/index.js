@@ -24,6 +24,8 @@ import InputMask from '../../components/InputMask';
 
 export default function Register() {
   const [phone, setPhone] = useState('');
+  const [processing, setProcessing] = useState(false);
+
   // const [color, setColor] = useState('#fff');
   const isDesktop = useMediaQuery({ query: '(min-device-width: 900px)' });
 
@@ -31,8 +33,21 @@ export default function Register() {
   //   if (isDesktop) setColor('#f0f');
   //   else setColor('#ff0');
   // }, [isDesktop]);
-  
-  const handleSubmit = data => console.log(data);
+
+  const handleSubmit = data => {
+    setProcessing(true);
+
+    fetch('https://api.iampro.app/register', {
+      method: 'post',
+      body: JSON.stringify(data)
+    }).then(response => {
+      setProcessing(false);
+      console.log(response);
+    }).catch(err => {
+      setProcessing(false);
+      console.log(err);
+    });
+  };
 
   return (
     <Container>
@@ -62,6 +77,8 @@ export default function Register() {
               <Input value="Ramires Gomes" name="name" title="Nome Completo" placeholder="Informe seu nome" />
               <SmallSelect title="Gênero" placeholder="Selecione..." />
               <Input
+                value="26/10/1992"
+                name="birth"
                 title="Data de Nascimento"
                 placeholder="DD/MM/AAAA"
                 style={{ width: 160 }}
@@ -132,8 +149,8 @@ export default function Register() {
           <InputContainer style={{ height: 177 }}>
             <TextArea value="..... . . . . .. ." name="services" title="Serviços que Oferece" full={isDesktop} />
           </InputContainer>
-          <button id="registerWeb" type="submit">
-            Cadastre-se Gratuitamente
+          <button id="registerWeb" disabled={processing} type="submit">
+            {processing ? "Enviando..." : "Cadastre-se Gratuitamente"}
           </button>
         </Form>
       </FormContainer>
