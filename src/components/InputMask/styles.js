@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: ${({ full }) => (full ? '100%' : '340px')};
-  height: ${({ full }) => (full ? '75px' : '60px')};
+  width: 100%;
+  height: 60px;
 
   div {
     display: flex;

@@ -74,11 +74,7 @@ export default function Register() {
                   : { display: 'block', marginVertical: 20 }
               }
             />
-            <Input
-              title="Data de Nascimento"
-              placeholder="DD/MM/AAAA"
-              style={{ backgroundColor: color }}
-            />
+            <Input title="Data de Nascimento" placeholder="DD/MM/AAAA" />
           </InputContainer>
           <InputContainer
             style={isDesktop === true ? { display: 'flex' } : { height: 140 }}
