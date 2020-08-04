@@ -11,6 +11,11 @@ export const Container = styled.div`
   #phone {
     display: block;
     margin-top: 40px;
+    text-align: center;
+  }
+
+  #phoneimg {
+    width: 80%;
   }
 
   @media screen and (min-width: 900px) {

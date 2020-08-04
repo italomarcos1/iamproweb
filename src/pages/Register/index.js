@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import {notify} from 'react-notify-toast';
+import { notify } from 'react-notify-toast';
 
 import {
   Container,
@@ -37,15 +37,20 @@ export default function Register() {
       method: 'post',
       body: JSON.stringify(data),
       headers: { 'Content-Type': 'application/json' },
-    }).then(res => res.json())
+    })
+      .then(res => res.json())
       .then(({ meta }) => {
         setProcessing(false);
         notify.show(meta.message, meta.status);
 
         reset();
-      }).catch(() => {
+      })
+      .catch(() => {
         setProcessing(false);
-        notify.show('Ocorreu um erro no processamento dos seus dados.', 'error');
+        notify.show(
+          'Ocorreu um erro no processamento dos seus dados.',
+          'error'
+        );
       });
   };
 
@@ -77,12 +82,16 @@ export default function Register() {
         <Form onSubmit={handleSubmit} ref={formRef}>
           {isDesktop === true ? (
             <InputContainer>
-              <Input name="name" title="Nome Completo" placeholder="Informe seu nome" />
+              <Input
+                name="name"
+                title="Nome Completo"
+                placeholder="Informe seu nome"
+              />
 
               <SmallSelect
-                  name="gender"
-                  title="Gênero"
-                  placeholder="Selecione..."
+                name="gender"
+                title="Gênero"
+                placeholder="Selecione..."
               />
 
               <Input
@@ -95,15 +104,21 @@ export default function Register() {
           ) : (
             <>
               <InputContainer>
-                <Input name="name" title="Nome Completo" placeholder="Informe seu nome" />
+                <Input
+                  name="name"
+                  title="Nome Completo"
+                  placeholder="Informe seu nome"
+                />
               </InputContainer>
 
               <InputContainer
                 style={{
+                  marginTop: 20,
                   flexDirection: 'row',
                   width: '100%',
                   height: 60,
                   justifyContent: 'center',
+                  //                  justifyContent: 'center',
                 }}
               >
                 <SmallSelect
@@ -141,27 +156,42 @@ export default function Register() {
               alwaysShowMask
               onChange={e => setPhone(e.target.value)}
               value={phone}
+              style={{ marginTop: 40 }}
             />
           </InputContainer>
 
           <InputContainer
-            style={isDesktop === true ? { display: 'flex' } : { height: 140 }}
+            style={
+              isDesktop === true
+                ? { display: 'flex' }
+                : { height: 180, marginTop: 40 }
+            }
           >
-            <Input name="occupation" title="Profissão" placeholder="Informe sua profissão" />
+            <Input
+              name="occupation"
+              title="Profissão"
+              placeholder="Informe sua profissão"
+              style={{ marginTop: 20 }}
+            />
 
             <Input
               name="operation"
               title="Qual a área de cobertura que atua em MG?"
               placeholder="Informe sua área de cobertura"
+              style={{ marginTop: 40 }}
             />
           </InputContainer>
 
-          <InputContainer style={{ height: 177 }}>
-            <TextArea name="services" title="Serviços que Oferece" full={isDesktop} />
+          <InputContainer style={{ height: 177, marginTop: 40 }}>
+            <TextArea
+              name="services"
+              title="Serviços que Oferece"
+              full={isDesktop}
+            />
           </InputContainer>
 
           <button id="registerWeb" disabled={processing} type="submit">
-            {processing ? "Enviando..." : "Cadastre-se Gratuitamente"}
+            {processing ? 'Enviando...' : 'Cadastre-se Gratuitamente'}
           </button>
         </Form>
       </FormContainer>
