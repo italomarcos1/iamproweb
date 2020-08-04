@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { notify } from 'react-notify-toast';
 
@@ -7,15 +8,16 @@ import {
   Header,
   Footer,
   Logo,
-  Background,
   Info,
   FormContainer,
   Form,
   InputContainer,
   FinishButton,
+  BannerContainer,
 } from './styles';
 
 import logo from '../../assets/logo.png';
+import logo2 from '../../assets/logo@2x.png';
 import smartphone from '../../assets/app-1.png';
 import Input from '../../components/Input';
 import SmallSelect from '../../components/SmallSelect';
@@ -57,12 +59,12 @@ export default function Register() {
   return (
     <Container>
       <Header>
-        <Background />
-
-        <Logo>
-          <img src={logo} alt="Logo" />
-        </Logo>
+        <Link>
+          <img src={logo} alt="Logo" srcSet={`${logo} 1x, ${logo2} 2x`} />
+        </Link>
       </Header>
+
+      <BannerContainer />
 
       <Info>
         <h2>Cadastro gratuito para o aplicativo</h2>
