@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import {notify} from 'react-notify-toast';
 
@@ -28,7 +28,9 @@ export default function Register() {
 
   const isDesktop = useMediaQuery({ query: '(min-device-width: 900px)' });
 
-  const handleSubmit = data => {
+  const formRef = useRef(null);
+
+  const handleSubmit = (data, { reset }) => {
     setProcessing(true);
 
     fetch('https://api.iampro.app/register', {
@@ -39,6 +41,8 @@ export default function Register() {
       .then(({ meta }) => {
         setProcessing(false);
         notify.show(meta.message, meta.status);
+
+        reset();
       }).catch(() => {
         setProcessing(false);
         notify.show('Ocorreu um erro no processamento dos seus dados.', 'error');
@@ -70,7 +74,7 @@ export default function Register() {
           <img src={smartphone} alt="phone" />
         </div>
 
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} ref={formRef}>
           {isDesktop === true ? (
             <InputContainer>
               <Input name="name" title="Nome Completo" placeholder="Informe seu nome" />
